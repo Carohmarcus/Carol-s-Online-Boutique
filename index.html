@@ -49,6 +49,25 @@
             <p>Phone: +254798380986</p>
         </div>
     </section>
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("e1UMcON0EB8g_kNaW"); // Replace with your EmailJS user ID
+    })();
+</script>
+
+<script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Create the email parameters
+        const emailParams = {
+            from_name: this.from_name.value,
+            from_email: this.from_email.value,
+            phone_number: this.phone_number.value,
+            message: this.message.value,
+            reply_to: this.from_email.value // Set the reply-to email
 
     <footer>
         <div class="container">
